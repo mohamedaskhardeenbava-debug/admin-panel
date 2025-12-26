@@ -162,6 +162,46 @@ const IngredientDetails = ({ adminData, setAdminData }) => {
                     </div>
                 </div>
 
+                {/* STOCK REMAINING */}
+<div className="section">
+  <div className="section-title">
+    <span>Stock Remaining (grams)</span>
+
+    {editSection === "stock" ? (
+      <div className="edit-row">
+        <input
+          type="number"
+          value={localIngredient.stockRemaining ?? 0}
+          onChange={(e) =>
+            setLocalIngredient({
+              ...localIngredient,
+              stockRemaining: Number(e.target.value)
+            })
+          }
+        />
+        <div className="action">
+          <button onClick={() => saveIngredient(localIngredient)}>
+            Save
+          </button>
+          <button onClick={() => setEditSection(null)}>
+            Cancel
+          </button>
+        </div>
+      </div>
+    ) : (
+      <p>{localIngredient.stockRemaining ?? 0} g</p>
+    )}
+
+    <img
+      className="edit-icon"
+      src={editIcon}
+      alt="edit"
+      onClick={() => setEditSection("stock")}
+    />
+  </div>
+</div>
+
+
                 {/* USED IN */}
                 <div className="section">
                     <div className="section-title">

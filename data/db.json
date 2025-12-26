@@ -1615,11 +1615,13 @@
         "image": "/assets/ingredient-assets/mazarola.png",
         "usedInCategories": [
           "pizza",
+          "burger",
+          "sandwich",
           "nachos",
-          "noodles"
+          "pasta"
         ],
         "pricePer100g": 60,
-        "stockRemaining": 20,
+        "stockRemaining": 22,
         "nutritionPer100g": {
           "kcal": 280,
           "protein": 28,
